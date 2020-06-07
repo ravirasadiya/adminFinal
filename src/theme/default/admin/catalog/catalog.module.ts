@@ -32,7 +32,7 @@ import { CategoriesService } from '../../../../core/admin/catalog/category/categ
 import { HttpClient } from '@angular/common/http';
 import { ProductService } from '../../../../core/admin/catalog/product/product.service';
 import { ProductEffect } from '../../../../core/admin/catalog/product/product-effect/product.effect';
-
+import { ProductOptionService } from '../../../../core/admin/catalog/product-option/product-option.service';
 
 @NgModule({
   declarations: [CatalogLayoutComponent, CatalogHeaderComponent],
@@ -47,9 +47,9 @@ import { ProductEffect } from '../../../../core/admin/catalog/product/product-ef
       LayoutEffects,
       CategoriesEffect,
       BrandEffects,
-      ProductEffect
+      ProductEffect,
     ]),
-    CKEditorModule
+    CKEditorModule,
   ],
   providers: [
     LayoutService,
@@ -57,9 +57,10 @@ import { ProductEffect } from '../../../../core/admin/catalog/product/product-ef
     BrandApiClient,
     BrandSandbox,
     CategoriesService,
-    ProductService
+    ProductService,
+    ProductOptionService,
   ],
   bootstrap: [],
-  entryComponents: []
+  entryComponents: [],
 })
 export class CatalogModule {}

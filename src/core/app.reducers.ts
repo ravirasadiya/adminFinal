@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import * as fromAuth from './admin/auth/reducer/auth.reducer';
 import * as fromCommon from './admin/logout/reducer/common.reducer';
 import * as fromProduct from './admin/catalog/product/product-reducer/product.reducer';
+import * as fromProductOption from './admin/catalog/product-option/reducer/product-option.reducer';
 import * as fromorder from './admin/settings/localizations/orderstatus/orderstatus-reducer/orderstatus.reducer';
 import * as fromCustomers from './admin/Customers/customers/customer-reducer/customer.reducer';
 import * as fromCountry from './admin/settings/localizations/country/country-reducer/country.reducer';
@@ -70,6 +71,7 @@ export const reducers: ActionReducerMap<State> = {
   media: fromMedia.reducer,
   categories: fromCategories.reducer,
   product: fromProduct.reducer,
+  productoption: fromProductOption.reducer,
   changepassword: fromChangepassword.reducer,
   customer: fromCustomers.reducer,
   orderStatus: fromorder.reducer,
@@ -93,11 +95,11 @@ export const reducers: ActionReducerMap<State> = {
   salesLayout: fromLayoutSales.reducer,
   personalizeProduct: fromPersonalizeProduct.reducer,
   personalizeOrder: fromPersonalizeOrder.reducer,
-  layout: fromLayout.reducer
+  layout: fromLayout.reducer,
 };
 
 export function logger(reducer: ActionReducer<State>): ActionReducer<any, any> {
-  return function(state: State, action: any): State {
+  return function (state: State, action: any): State {
     if (action.type === '[Common] Do Clear') {
       state = undefined;
     }

@@ -20,23 +20,28 @@ const catalogRoutes: Routes = [
     children: [
       {
         path: 'product',
-        loadChildren: './components/product/product.module#ProductModule'
+        loadChildren: './components/product/product.module#ProductModule',
+      },
+      {
+        path: 'product-options',
+        loadChildren:
+          './components/product-option/product-option.module#ProductOptionModule',
       },
       {
         path: 'categories',
         loadChildren:
-          './components/categories/categories.module#CategoriesModule'
+          './components/categories/categories.module#CategoriesModule',
       },
       {
         path: 'brand',
-        loadChildren: './components/brand/brand.module#BrandModule'
-      }
-    ]
-  }
+        loadChildren: './components/brand/brand.module#BrandModule',
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(catalogRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class CatalogRoutingModule {}

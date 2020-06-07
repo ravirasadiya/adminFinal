@@ -39,6 +39,7 @@ import { SalesLayoutState } from './admin/sales/layout/reducer/layout.state';
 import { PersonalizeProductState } from './admin/settings/personalize/product/product-reducer/product-state';
 import { PersonalizeOrderState } from './admin/settings/personalize/order/order-reducer/order-state';
 import { LayoutState } from './admin/layout/reducer/layout.state';
+import { ProductOptionState } from './admin/catalog/product-option/reducer/product-option.state';
 
 /**
  *
@@ -51,6 +52,7 @@ export interface AppState {
   common: CommonState;
   media: Media;
   categories: CategoriesState;
+  productoption: ProductOptionState;
   product: ProductState;
   changepassword: ChangePasswordState;
   customer: CustomerState;
